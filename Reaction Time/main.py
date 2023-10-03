@@ -1,6 +1,6 @@
 import pyautogui
 
-# FAILSAFE just in case
+# FAILSAFE, just in case
 pyautogui.FAILSAFE = True
 
 # Defining the ONLY clickable color (slight green)
