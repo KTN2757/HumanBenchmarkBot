@@ -13,9 +13,23 @@ y = [346, 342, 353, 486, 486, 485, 609, 618, 613]
 
 # Infinitely Iterating Loop
 i = 0
+clickCounter = 0
+
+
+def click(x, y):
+    pass
+
+
+clickableTilesX = []
+clickableTilesY = []
 while True:
     if pyautogui.pixel(x[i], y[i]) == clickableColor:
-        pyautogui.click(x[i], y[i])
+        clickableTilesX.append(x[i])
+        clickableTilesY.append(y[i])
+        time.sleep(clickCounter + 2)
+        for j in range(0, len(clickableTilesX) - 1):
+            print(clickableTilesX[j], clickableTilesY[j])
+        clickCounter += 1
     i += 1
     if i == 9:
         i = 0
